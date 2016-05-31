@@ -1,0 +1,10 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Name: keendo-slack-webhooks
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Keendo
+Bundle-Version: 1.0.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.keendo.slack.webhooks
+Nuxeo-Component: OSGI-INF/extensions/operations-contrib.xml
