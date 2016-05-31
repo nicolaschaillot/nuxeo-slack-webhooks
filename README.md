@@ -11,4 +11,4 @@
 ###SLACK
 
 ### Java
-https://github.com/flowctrl/slack-api
+https://github.com/allbegray/slack-api
