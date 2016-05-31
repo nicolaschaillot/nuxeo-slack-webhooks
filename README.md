@@ -1,4 +1,4 @@
-#Keendo Slack WebHooks
+#Nuxeo Slack WebHooks
 
 ## General information and motivation
 
@@ -7,10 +7,8 @@
 ###Login Plugin Configuration:
 
 ##About
-###Keendo
 
 ###SLACK
 
 ### Java
 https://github.com/flowctrl/slack-api
-
