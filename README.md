@@ -15,11 +15,9 @@ It allows sending webhooks to Slack. For example, to notify users of events in N
 
 ### Plugin Configuration
 
-## About
-
-### SLACK
+### Slack
 * https://slack.com/
 * https://api.slack.com/incoming-webhooks
 
-### Java
+### Java client
 * https://github.com/allbegray/slack-api
