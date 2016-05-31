@@ -4,6 +4,8 @@
 This plugin contains a operation usable in an automation chain.
 It allows sending webhooks to Slack. For example, to notify users of events in Nuxeo platform.
 
+http://www.nuxeo.com
+
 ### Getting Started
 
 #### Params
