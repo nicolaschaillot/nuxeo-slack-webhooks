@@ -12,11 +12,12 @@ Params :
 * Custom icon. : @Param(name = "customIconUrl", required = false)
 * The message to post. : @Param(name = "message", required = true)
 
-###Login Plugin Configuration:
+###Plugin Configuration
 
 ##About
 
 ###SLACK
+https://slack.com/
 
-### Java
+###Java
 https://github.com/allbegray/slack-api
