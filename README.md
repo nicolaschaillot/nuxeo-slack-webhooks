@@ -18,6 +18,7 @@ Params :
 
 ###SLACK
 https://slack.com/
+https://api.slack.com/incoming-webhooks
 
 ###Java
 https://github.com/allbegray/slack-api
