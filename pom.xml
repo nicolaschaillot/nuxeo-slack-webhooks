@@ -5,12 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>fr.vif.plim</groupId>
-    <artifactId>keendo-core</artifactId>
-    <version>7.10.16.1-SNAPSHOT</version>
+    <groupId>org.nuxeo</groupId>
+    <artifactId>nuxeo-ecm</artifactId>
+    <version>7.10</version>
   </parent>
 
-  <artifactId>keendo-slack-webhooks</artifactId>
+  <artifactId>nuxeo-slack-webhooks</artifactId>
 
   <dependencies>
     <dependency>
@@ -22,133 +22,6 @@
       <artifactId>slack-api</artifactId>
       <version>v1.0.12.RELEASE</version>
     </dependency>
-    <!-- test dependencies -->
-    <dependency>
-      <groupId>${plim.groupId}</groupId>
-      <artifactId>keendo-test</artifactId>
-      <classifier>tests</classifier>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>${plim.groupId}</groupId>
-      <artifactId>plim-core-common</artifactId>
-      <classifier>tests</classifier>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
-
-  <profiles>
-    <profile>
-      <id>copy-jar-on-windows</id>
-      <activation>
-        <os>
-          <family>Windows</family>
-        </os>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <!-- Copy the artifact to the plugins directory of the nuxeo server.
-            This will fail under windows if the Nuxeo server is running. -->
-            <artifactId>maven-antrun-plugin</artifactId>
-            <executions>
-              <execution>
-                <phase>install</phase>
-                <configuration>
-                  <target>
-                    <property name="plugins.directory.path.absolute" value="${nuxeo.directory.path.absolute}/${plugins.directory.path.relative}"/>
-                    <mkdir dir="${plugins.directory.path.absolute}"/>
-                    <delete verbose="true">
-                      <fileset dir="${plugins.directory.path.absolute}" includes="${project.build.finalName}*.jar"/>
-                    </delete>
-                    <copy
-                            file="${project.build.directory}/${project.build.finalName}.jar"
-                            todir="${plugins.directory.path.absolute}" verbose="true"/>
-                  </target>
-                </configuration>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>copy-jar-on-unix</id>
-      <activation>
-        <os>
-          <family>Unix</family>
-        </os>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <!-- Copy the artifact to the plugins directory of the nuxeo server.
-            This will fail under windows if the Nuxeo server is running. -->
-            <artifactId>maven-antrun-plugin</artifactId>
-            <executions>
-              <execution>
-                <phase>install</phase>
-                <configuration>
-                  <target>
-                    <property name="plugins.directory.path.absolute" value="${nuxeo.directory.path.absolute}/${plugins.directory.path.relative}"/>
-                    <mkdir dir="${plugins.directory.path.absolute}"/>
-                    <delete verbose="true">
-                      <fileset dir="${plugins.directory.path.absolute}" includes="${project.build.finalName}*.jar"/>
-                    </delete>
-                    <copy
-                            file="${project.build.directory}/${project.build.finalName}.jar"
-                            todir="${plugins.directory.path.absolute}" verbose="true"/>
-                  </target>
-                </configuration>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>copy-jar-on-mac</id>
-      <activation>
-        <os>
-          <family>mac</family>
-        </os>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <!-- Copy the artifact to the plugins directory of the nuxeo server.
-            This will fail under windows if the Nuxeo server is running. -->
-            <artifactId>maven-antrun-plugin</artifactId>
-            <executions>
-              <execution>
-                <phase>install</phase>
-                <configuration>
-                  <target>
-                    <property name="plugins.directory.path.absolute" value="${nuxeo.directory.path.absolute}/${plugins.directory.path.relative}"/>
-                    <mkdir dir="${plugins.directory.path.absolute}"/>
-                    <delete verbose="true">
-                      <fileset dir="${plugins.directory.path.absolute}" includes="${project.build.finalName}*.jar"/>
-                    </delete>
-                    <copy
-                            file="${project.build.directory}/${project.build.finalName}.jar"
-                            todir="${plugins.directory.path.absolute}" verbose="true"/>
-                  </target>
-                </configuration>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 
 </project>
