@@ -1,7 +1,7 @@
 #Nuxeo Slack WebHooks
 
 ## General information and motivation
-This plugin contains a operation usable in an automationchain.
+This plugin contains a operation usable in an automation chain.
 It allows sending webhooks to Slack. For example, to notify users of events in Nuxeo platform.
 
 ### Getting Started
